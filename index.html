@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Expenses list - Organize your wallet</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <button class="nav__toggle-button">
+        <span class="nav__toggle-button-bar"></span>
+        <span class="nav__toggle-button-bar"></span>
+        <span class="nav__toggle-button-bar"></span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+        <!-- <li class="nav__item"><a href="#" class="nav__link">Reports</a></li> -->
+        <li class="nav__item"><a href="#dashboard" class="nav__link">Dashboard</a></li>
+        <li class="nav__item"><a href="#categories" class="nav__link">Categories</a></li>
+        <!-- <li class="nav__item"><a href="#" class="nav__link">Profile</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Log out</a></li> -->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="hero__title title">Organize your wallet, <br> bringhten your future</h1>
+    </section>
+    <section class="info">
+      <h2 class="info__title title">Money Talks</h2>
+      <p class="info__description description">Tired of losing track of your expenses? Fear no more! Our Expense Tracker
+        Table is here to save the day and your wallet. Dive into the sea of financial knowledge and keep an eye on your
+        spending habits.</p>
+      <p class="info__description description">Drill down into your spending like a true finance detective. Analyze your
+        expenses by categories, times, and amounts, revealing your true financial persona.</p>
+    </section>
+    <section class="expenses_box" id="dashboard">
+      <h1 class="expenses-box__title title">Expenses</h1>
+      <h2 class="expenses-box__subtitle subtitle">Search expense</h2>
+      <form class="expenses-box__form form">
+        <div class="form__labels">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Period</legend>
+            <div class="form__item">
+              <label class="form__label" for="period"><span class="form__label-text">Start date</span><span
+                  class="form__range">
+                  <input type="date" class="form__date" id="period-start" aria-labelledby="period">
+              </label>
+              <label class="form__label" for="period"><span class="form__label-text">End date</span><span
+                  class="form__range">
+                  <input type="date" class="form__date" id="period-end" aria-labelledby="period">
+              </label>
+            </div>
+          </fieldset>
+          <label class="form__label" for="category"><span class="form__label-text">Category</span>
+            <select class="form__select" id="category">
+              <option value="all">all</option>
+              <option value="food">food</option>
+              <option value="house">house</option>
+              <option value="transport">transport</option>
+              <option value="health_and_beauty">health and beauty</option>
+              <option value="clothingy">clothing</option>
+              <option value="pet_care">pet care</option>
+              <option value="entertainment">entertainment</option>
+              <option value="education">education</option>
+              <option value="technology">technology</option>
+              <option value="other">other</option>
+            </select>
+          </label>
+          <label class="form__label" for="name"><span class="form__label-text">Name</span>
+            <input type="text" class="form__input" id="name" aria-labelledby="name" placeholder="Type name of expense">
+          </label>
+        </div>
+        <div class="form__buttons">
+          <button class="button__search" type="submit">
+            <i class="material-icons">search</i>
+            Search</button>
+          <button class="button__clear" type="reset">
+            <i class="material-icons">close</i>
+            Clear All</button>
+        </div>
+      </form>
+      <div class="table-wrapper">
+        <table class="expenses-list table">
+          <caption class="expenses-list__caption">Expenses List</caption>
+          <thead>
+            <th scope="col" class="expenses-list__header">Name of Expenses:</th>
+            <th scope="col" class="expenses-list__header">Category:</th>
+            <th scope="col" class="expenses-list__header">Date:</th>
+            <th scope="col" class="expenses-list__header">Amount:</th>
+          </thead>
+          <tbody id="expensesTable">
+            <tr class="expense__item">
+              <td headers="name" class="expenses-list__name">coffee</td>
+              <td headers="category" class="expenses-list__category">food</td>
+              <td headers="date" class="expenses-list__date">2022-07-16</td>
+              <td headers="price" class="expenses-list__price"><span class="expenses-list__amount">40</span><span
+                  class="expenses-list__currency">PLN</span></td>
+            </tr>
+            <tr class="expenses-list__noexpense">
+              <td colspan="4">There is no such expense.</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="expenses-list__total" colspan="3">Total:</td>
+              <td class="expenses-list__total-amount"><span class="expenses-list__amount" id="totalAmount">0</span><span
+                  class="expenses-list__currency">PLN</span></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="pagination">
+      </div>
+    </section>
+    <section class="categories" id="categories">
+      <h2 class="categories__title title">Categories</h2>
+      <ul class="categories__list">
+        <li class="categories__item">
+          food
+        </li>
+        <li class="categories__item">house</li>
+        <li class="categories__item">transport</li>
+        <li class="categories__item">health and beauty</li>
+        <li class="categories__item">clothing</li>
+        <li class="categories__item">pet care</li>
+        <li class="categories__item">entertainment</li>
+        <li class="categories__item">education</li>
+        <li class="categories__item">technology</li>
+        <li class="categories__item">other</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    Coded by
+    <a class="footer__link" href="https://github.com/agnieszkastanczuk">
+      <i class="material-icons">link</i>
+      <span class="footer__text">ASD</span>
+    </a>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+
+</html>

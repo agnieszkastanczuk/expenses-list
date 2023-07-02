@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --primary-color: #d2afe0;
+    --secondary-color: #89c5cc;
+    --accent-color: #6a9e79;
+    --error-color: #c26834;
+    --text-color-primary-on-background: #1b1b1b;
+    --background-color: #EBDADD;
+    --second-background-color: #161616;
+    --text-color-secondary-on-background: #d4c4c4;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Spline Sans Mono', monospace;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+main {
+    font-size: 0.8rem;
+}
+
+section {
+    margin: auto;
+    max-width: 1220px;
+}
+
+.hero {
+    height: 100vh;
+    align-items: flex-end;
+    display: flex;
+    padding-inline: 2%;
+    padding-bottom: 20vh;
+    background-image: url(/img/Hero-Humaaans-Standing.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.info {
+    background-color: var(--second-background-color);
+    color: var(--text-color-secondary-on-background);
+    height: 80vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 30px;
+
+    &__title,
+    &__description {
+        padding-inline: 10%;
+        margin-inline: auto;
+    }
+}
+
+
+// navbar
+
+.nav {
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    &__toggle-button {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: none;
+        top: 20px;
+        right: 20px;
+        position: fixed;
+        background-color: transparent;
+    }
+
+    &__toggle-button-bar {
+        background-color: var(--text-color-primary-on-background);
+        width: 27px;
+        height: 4px;
+    }
+
+    &__list {
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        display: none;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        padding-inline: 5%;
+        color: var(--second-background-color);
+    }
+
+    &__link {
+        text-decoration: none;
+        outline: none;
+        color: inherit;
+    }
+
+    &__link:hover {
+        border-bottom: 4px solid var(--secondary-color);
+    }
+
+    &__link:active {
+        border-bottom: 4px solid var(--text-color-primary-on-background);
+    }
+}
+
+.active {
+    display: flex;
+    background-color: var(--second-background-color);
+    color: var(--text-color-secondary-on-background);
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+}
+
+
+//titles
+.expenses_box {
+    padding-inline: 5%;
+    border: 8px solid var(--secondary-color);
+    border-radius: 24px;
+}
+
+.title {
+    font-size: calc(2rem + 4vmin);
+    font-weight: 900;
+    padding-top: 6rem;
+    min-height: 10vh;
+    max-width: 1220px;
+    font-family: 'Unica One', cursive;
+}
+
+.subtitle {
+    font-size: calc(1rem + 2vmin);
+    font-weight: 900;
+    font-family: 'Unica One', cursive;
+}
+
+//form
+
+.form {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    border-radius: 24px;
+
+    &__fieldset {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__labels {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__legend,
+    &__label-text {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    &__label-text {
+        display: inline-block;
+        width: 100px;
+    }
+
+    &__date {
+        margin-right: 16px;
+    }
+
+    &__date,
+    &__input,
+    &__select {
+        font-family: inherit;
+        padding: 4px;
+        margin-block: 2px;
+        height: 42px;
+        border: none;
+    }
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+button {
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-family: 'Unica One', cursive;
+}
+
+.button__search {
+    box-shadow: none;
+}
+
+.button__search:hover,
+.button__clear:hover {
+    background-color: var(--primary-color);
+    transition-delay: 0.2s;
+}
+
+.button__clear {
+    background-color: var(--background-color);
+}
+
+.expenses-list {
+    margin-block: 40px;
+    width: 100%;
+    text-align: left;
+    min-width: 400px;
+
+    &__currency {
+        padding-left: 4px;
+    }
+
+    &__total {
+        text-align: right;
+    }
+
+    &__noexpense {
+        text-align: center;
+        display: none;
+        color: var(--error-color);
+    }
+}
+
+//table
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: calc(1rem + 2vmin);
+    font-weight: 900;
+    padding-bottom: 2%;
+    font-family: 'Unica One', cursive;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid var(--background-color);
+}
+
+th,
+tfoot {
+    background-color: var(--accent-color);
+}
+
+tfoot {
+    font-weight: 700;
+}
+
+//pagination
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    &__button {
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.active-page {
+    color: var(--accent-color);
+}
+
+.categories {
+    margin-top: 24px;
+    padding-bottom: 48px;
+    background-color: var(--secondary-color);
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    background-image: url(/img/Categories-Humaaans-Space.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    &__title,
+    &__list {
+        margin-inline: auto;
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    &__item {
+        width: 110px;
+        height: 110px;
+        display: flex;
+        background-color: var(--background-color);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 0.8rem;
+    }
+
+    &__item:hover {
+        background-color: var(--accent-color);
+    }
+}
+
+.footer {
+    background-color: var(--second-background-color);
+    color: var(--text-color-secondary-on-background);
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__link {
+        color: var(--accent-color);
+        display: flex;
+        gap: 4px;
+        text-decoration: none;
+        align-items: center;
+        margin-left: 16px;
+    }
+}
+
+@media (min-width: 767px) {
+    main {
+        font-size: 1.1rem;
+    }
+
+    .expenses_box {
+        padding-inline: 10%;
+    }
+
+    .nav {
+        padding-top: 40px;
+        background-color: transparent;
+        position: relative;
+
+        &__toggle-button {
+            display: none;
+        }
+
+        &__list {
+            display: flex;
+            font-size: 1.1rem;
+            padding-inline: 10%;
+        }
+
+        &__item {
+            padding-inline-start: 4rem;
+        }
+    }
+
+    .info {
+        background-image: url(/img/Info-Humaaans-Character.png);
+        background-position: right 20% bottom 10%;
+        background-repeat: no-repeat;
+
+        &__title,
+        &__description {
+            max-width: 1220px;
+            margin-left: 10%;
+        }
+
+        &__description {
+            max-width: 900px;
+        }
+    }
+
+    .categories {
+        height: 70vh;
+    }
+
+    .form,
+    .expenses-list,
+    .pagination {
+        max-width: 1440px;
+    }
+
+    .form {
+        &__buttons {
+            justify-content: flex-end;
+            gap: 20px;
+        }
+    }
+}

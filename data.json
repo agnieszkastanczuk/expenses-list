@@ -1,0 +1,299 @@
+[
+    {
+        "name": "coffee",
+        "category": "food",
+        "date": "2021-07-16",
+        "price": {
+            "amount": 40,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "bread",
+        "category": "food",
+        "date": "2021-08-03",
+        "price": {
+            "amount": 8,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "groceries",
+        "category": "food",
+        "date": "2022-09-10",
+        "price": {
+            "amount": 150,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "restaurant",
+        "category": "food",
+        "date": "2022-11-20",
+        "price": {
+            "amount": 80,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "house rent",
+        "category": "house",
+        "date": "2022-07-01",
+        "price": {
+            "amount": 2000,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "utilities",
+        "category": "house",
+        "date": "2022-07-15",
+        "price": {
+            "amount": 300,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "furniture",
+        "category": "house",
+        "date": "2022-08-10",
+        "price": {
+            "amount": 1000,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "home repairs",
+        "category": "house",
+        "date": "2022-10-05",
+        "price": {
+            "amount": 500,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "gas",
+        "category": "transport",
+        "date": "2021-07-05",
+        "price": {
+            "amount": 150,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "car insurance",
+        "category": "transport",
+        "date": "2022-08-20",
+        "price": {
+            "amount": 500,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "public transportation",
+        "category": "transport",
+        "date": "2022-09-30",
+        "price": {
+            "amount": 50,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "gym membership",
+        "category": "health_and_beauty",
+        "date": "2022-07-10",
+        "price": {
+            "amount": 200,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "beauty salon",
+        "category": "health_and_beauty",
+        "date": "2022-08-25",
+        "price": {
+            "amount": 300,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "medications",
+        "category": "health_and_beauty",
+        "date": "2022-09-05",
+        "price": {
+            "amount": 80,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "clothing store",
+        "category": "clothing",
+        "date": "2022-07-05",
+        "price": {
+            "amount": 200,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "shoes",
+        "category": "clothing",
+        "date": "2022-08-15",
+        "price": {
+            "amount": 150,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "jewelry",
+        "category": "clothing",
+        "date": "2022-09-25",
+        "price": {
+            "amount": 300,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "pet food",
+        "category": "pet_care",
+        "date": "2022-07-10",
+        "price": {
+            "amount": 50,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "veterinary visit",
+        "category": "pet_care",
+        "date": "2022-08-20",
+        "price": {
+            "amount": 150,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "pet grooming",
+        "category": "pet_care",
+        "date": "2022-09-30",
+        "price": {
+            "amount": 80,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "movie theater",
+        "category": "entertainment",
+        "date": "2022-07-05",
+        "price": {
+            "amount": 60,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "concert tickets",
+        "category": "entertainment",
+        "date": "2022-08-15",
+        "price": {
+            "amount": 200,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "theme park",
+        "category": "entertainment",
+        "date": "2022-09-25",
+        "price": {
+            "amount": 150,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "textbooks",
+        "category": "education",
+        "date": "2023-03-10",
+        "price": {
+            "amount": 100,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "online courses",
+        "category": "education",
+        "date": "2023-02-20",
+        "price": {
+            "amount": 349,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "school supplies",
+        "category": "education",
+        "date": "2022-09-30",
+        "price": {
+            "amount": 50,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "Excel courses",
+        "category": "education",
+        "date": "2022-09-01",
+        "price": {
+            "amount": 241,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "laptop",
+        "category": "technology",
+        "date": "2022-07-05",
+        "price": {
+            "amount": 4000,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "smartphone",
+        "category": "technology",
+        "date": "2022-08-15",
+        "price": {
+            "amount": 2570,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "headphones",
+        "category": "technology",
+        "date": "2022-09-25",
+        "price": {
+            "amount": 200,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "miscellaneous",
+        "category": "other",
+        "date": "2022-07-10",
+        "price": {
+            "amount": 50,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "gifts",
+        "category": "other",
+        "date": "2022-08-20",
+        "price": {
+            "amount": 384,
+            "currency": "PLN"
+        }
+    },
+    {
+        "name": "charity donation",
+        "category": "other",
+        "date": "2022-09-30",
+        "price": {
+            "amount": 100,
+            "currency": "PLN"
+        }
+    }
+]
